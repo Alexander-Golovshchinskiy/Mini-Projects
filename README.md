@@ -1,5 +1,4 @@
 # Mini-Projects
-Code for mini-projects - both related or unrelated to biology.
 
 ## 1) DNA Skew Diagram and Motif Finding Mini-Project
 
