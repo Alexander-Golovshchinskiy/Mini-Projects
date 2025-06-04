@@ -2,7 +2,7 @@
 Code for mini-projects - both related or unrelated to biology.
 
 
-# 1) PNG Processor
+## 1) PNG Decoder
 
 A lightweight Python class for reading and processing raw `.png` image files that follow strict constraints:
 
@@ -18,18 +18,6 @@ A lightweight Python class for reading and processing raw `.png` image files tha
 - Extracts metadata: width, height, bit depth, color type, etc.  
 - Reads and identifies PNG chunks (IHDR, IDAT, etc.)  
 - Decompresses and reconstructs RGB pixel data  
-- Enables further modification and saving of PNGs (planned)
+- Enables saving of each of the R, G, B channels into a separate file
 
-## Usage
 
-```python
-from png import PNG
-
-png = PNG()
-png.load_file('example.png')
-
-if png.valid_png():
-    png.read_header()
-    print(f"Width: {png.width}, Height: {png.height}")
-else:
-    print("Invalid PNG file.")
