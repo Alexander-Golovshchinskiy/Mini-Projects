@@ -2,15 +2,15 @@
 
 ## 1) DNA Skew Diagram and Motif Finding Mini-Project
 
-This mini-project implements algorithms for DNA sequence analysis, focusing on:
+This mini-project implements algorithms for DNA sequence analysis to find the location of the chromosomal origin of replication (oriC) for *Salmonella enterica*.
+Skew diagrams are used to identify regions of nucleotide bias that often mark the origin of replication, while pattern matching detects conserved dnaA box motifs near these regions. 
 
-- Calculating **skew diagrams** to find regions of nucleotide bias (G vs C) which can help locate origins of replication.
-- Computing **Hamming distance** to allow approximate pattern matching.
-- Finding **approximate matches** of DNA patterns with mismatches.
-- Generating **neighbors** (all possible k-mers within a mismatch distance).
-- Detecting **most frequent k-mers** with mismatches and reverse complements.
-- Finding **(L, t, d)-clumps**: k-mers that appear frequently with mismatches in sliding windows.
-- Combining skew and clump analysis to predict functional genomic regions such as DnaA boxes.
+- **Skew diagrams** plot the cumulative difference between the occurrences of guanine (G) and cytosine (C) along the genome; since DNA replication tends to favor G on the leading strand and C on the lagging strand, the minimum point of the skew curve often corresponds to the origin of replication.
+
+- **dnaA boxes** dnaA boxes are short, conserved DNA sequences typically 9 base pairs long that serve as binding sites for the DnaA protein, which initiates DNA replication at the origin by unwinding the DNA helix.
+
+
+It primarily focuses on
 
 ---
 
@@ -35,7 +35,7 @@ Using the *Salmonella enterica* genome data, the following key results were obta
 
 - **Frequent 9-mers with up to 1 mismatch** found in sliding windows (length 250 bp) that appear at least 5 times include:  
  `['TTATCCACA', 'TCATCCACA', 'TTATTCACA', 'TTATCCACC']`
-These k-mers are consistent with known DnaA box motifs, indicating likely replication initiation sites.
+These k-mers are consistent with known dnaA box motifs (Skovgaard O. and Hansen F.G., 1987), indicating likely replication initiation sites.
 
 - The combined analysis of skew diagrams and clump-finding supports the prediction of functional replication origins in the genome.
 
@@ -57,7 +57,9 @@ A lightweight Python class for reading and processing raw `.png` image files tha
 - Extracts metadata: width, height, bit depth, color type, etc.  
 - Reads and identifies PNG chunks (IHDR, IDAT, etc.)  
 - Decompresses and reconstructs RGB pixel data  
-- Enables saving of each of the R, G, B channels into a separate file
+- Enables saving of each of the Red, Green, or Blue channels into a separate file
 
 
+## References
 
+Skovgaard, O. and Hansen, F.G., 1987. Comparison of dnaA nucleotide sequences of Escherichia coli, Salmonella typhimurium, and Serratia marcescens. Journal of bacteriology, 169(9), pp.3976-3981.
