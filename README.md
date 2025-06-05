@@ -63,3 +63,5 @@ A lightweight Python class for reading and processing raw `.png` image files tha
 ## References
 
 Skovgaard, O. and Hansen, F.G., 1987. Comparison of dnaA nucleotide sequences of Escherichia coli, Salmonella typhimurium, and Serratia marcescens. Journal of bacteriology, 169(9), pp.3976-3981.
+
+PNG Specification: https://www.w3.org/TR/png/
