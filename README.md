@@ -7,10 +7,7 @@ Skew diagrams are used to identify regions of nucleotide bias that often mark th
 
 - **Skew diagrams** plot the cumulative difference between the occurrences of guanine (G) and cytosine (C) along the genome; since DNA replication tends to favor G on the leading strand and C on the lagging strand, the minimum point of the skew curve often corresponds to the origin of replication.
 
-- **dnaA boxes** dnaA boxes are short, conserved DNA sequences typically 9 base pairs long that serve as binding sites for the DnaA protein, which initiates DNA replication at the origin by unwinding the DNA helix.
-
-
-It primarily focuses on
+- **dnaA boxes** are short, conserved DNA sequences typically 9 base pairs long that serve as binding sites for the DnaA protein, which initiates DNA replication at the origin by unwinding the DNA helix.
 
 ---
 
